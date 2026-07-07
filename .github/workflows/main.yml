@@ -1,0 +1,17 @@
+name: Video Processor
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prueba:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Mostrar mensaje
+        run: echo "Nuestro editor funciona correctamente"
