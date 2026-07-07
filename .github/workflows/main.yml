@@ -13,5 +13,10 @@ jobs:
       - name: Descargar repositorio
         uses: actions/checkout@v4
 
-      - name: Mostrar mensaje
-        run: echo "Nuestro editor funciona correctamente"
+      - name: Instalar FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Verificar instalación
+        run: ffmpeg -version
